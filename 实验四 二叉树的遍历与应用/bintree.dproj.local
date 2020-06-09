@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/06/03 09:55:49.000.739,=C:\Users\hp\Desktop\Unit1.pas</Transaction>
+    <Transaction>2020/06/03 09:59:45.000.621,D:\sync_doc\算法与数据结构\Algorithms\实验四 二叉树的遍历与应用\main.pas=C:\Users\hp\Desktop\Unit1.pas</Transaction>
+    <Transaction>2020/06/03 09:59:45.000.621,D:\sync_doc\算法与数据结构\Algorithms\实验四 二叉树的遍历与应用\main.fmx=C:\Users\hp\Desktop\Unit1.fmx</Transaction>
+    <Transaction>2020/06/03 09:59:56.000.361,D:\sync_doc\算法与数据结构\Algorithms\实验四 二叉树的遍历与应用\bintree.dproj=C:\Users\hp\Desktop\Project1.dproj</Transaction>
+    <Transaction>2020/06/03 12:59:21.000.274,=D:\sync_doc\算法与数据结构\Algorithms\实验四 二叉树的遍历与应用\Unit1.pas</Transaction>
+    <Transaction>2020/06/03 12:59:42.000.254,D:\sync_doc\算法与数据结构\Algorithms\实验四 二叉树的遍历与应用\Unit1.pas=D:\sync_doc\算法与数据结构\Algorithms\实验四 二叉树的遍历与应用\tree.pas</Transaction>
+  </Transactions>
+</BorlandProject>
