@@ -32,15 +32,15 @@ int main() {
     for (int i(0); i < 50; ++i) {
         q.put(std::rand());
         q.put(std::rand());
-        std::cout << q.get() << std::endl;
+        std::cout << q.get() << ' ';
         GET_MAX(maxLen, q.size());
         q.pop();
     }
-    std::cout << "=========\n";
+    std::cout << "\n================================\n";
     while (q.size()) {
-        std::cout << q.get() << std::endl;
+        std::cout << q.get() << ' ';
         q.pop();
     }
-    std::cout << "max len = " << maxLen << std::endl;
+    std::cout << "\nmax len = " << maxLen << std::endl;
     return 0;
 }

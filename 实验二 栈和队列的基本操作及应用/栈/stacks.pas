@@ -15,7 +15,14 @@ type
   end;
 
   TLinkStack = class
-
+    private
+      next: ^TLinkStack;
+      dat: char;
+    public
+      constructor Create;
+      procedure Push(c: char);
+      function Pop : char;
+      function Size : integer;
   end;
 
 implementation
@@ -46,4 +53,34 @@ begin
   Result := p;
 end;
 
+
+constructor TLinkStack.Create;
+begin
+  inherited Create;
+  next := nil;
+  dat := #0;
+end;
+
+procedure TLinkStack.Push(c: Char);
+begin
+  new(next);
+end;
+
+function TLinkStack.Pop;
+begin
+
+end;
+
+function TLinkStack.Size;
+var
+  i: ^TLinkStack;
+  s: integer;
+begin
+  while i^.next <> nil do
+    begin
+      Inc(s);
+      // i := i^.next;
+    end;
+  Result := s;
+end;
 end.

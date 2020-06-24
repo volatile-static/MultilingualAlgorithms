@@ -3,14 +3,14 @@
 	<Transactions>
     <Transaction>2020/05/29 21:11:47.000.622,=C:\Users\hp\Desktop\Unit1.pas</Transaction>
     <Transaction>2020/05/30 16:05:37.000.369,=C:\Users\hp\Desktop\Unit1.pas</Transaction>
-    <Transaction>2020/05/30 16:09:06.000.949,C:\Users\hp\Desktop\Unit1.fmx=D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\main.fmx</Transaction>
-    <Transaction>2020/05/30 16:09:06.000.949,C:\Users\hp\Desktop\Unit1.pas=D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\main.pas</Transaction>
-    <Transaction>2020/05/30 16:09:18.000.166,C:\Users\hp\Desktop\Project1.dproj=D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\stack.dproj</Transaction>
+    <Transaction>2020/05/30 16:09:06.000.949,D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\main.pas=C:\Users\hp\Desktop\Unit1.pas</Transaction>
+    <Transaction>2020/05/30 16:09:06.000.949,D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\main.fmx=C:\Users\hp\Desktop\Unit1.fmx</Transaction>
+    <Transaction>2020/05/30 16:09:18.000.166,D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\stack.dproj=C:\Users\hp\Desktop\Project1.dproj</Transaction>
     <Transaction>2020/05/30 16:31:36.000.325,=D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\Unit1.pas</Transaction>
-    <Transaction>2020/05/30 16:36:47.000.804,D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\Unit1.pas=D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\stack.pas</Transaction>
+    <Transaction>2020/05/30 16:36:47.000.804,D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\stack.pas=D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\Unit1.pas</Transaction>
     <Transaction>2020/05/30 17:20:08.000.464,=D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\Unit1.pas</Transaction>
-    <Transaction>2020/05/30 17:21:11.000.126,D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\TStack.pas=D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\Unit1.pas</Transaction>
+    <Transaction>2020/05/30 17:21:11.000.126,D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\Unit1.pas=D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\TStack.pas</Transaction>
     <Transaction>2020/05/30 17:27:05.000.276,=D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\Unit1.pas</Transaction>
-    <Transaction>2020/05/30 17:27:44.000.086,D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\Unit1.pas=D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\stacks.pas</Transaction>
+    <Transaction>2020/05/30 17:27:44.000.086,D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\stacks.pas=D:\sync_doc\算法与数据结构\Algorithms\实验二 栈和队列的基本操作及应用\栈\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>
