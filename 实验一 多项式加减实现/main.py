@@ -20,12 +20,12 @@ class TopGUI(QtWidgets.QMainWindow, mForm):
         F = A / B
 
         ax = plt.subplot(111)
-        ax.text(0.1, 0.9, 'A(x) = ' + str(A), fontsize = 36, color = "green")
-        ax.text(0.1, 0.8, 'B(x) = ' + str(B), fontsize = 36, color = 'red')
-        ax.text(0.1, 0.7, 'C(x) = A(x) + B(x) = ' + str(C), fontsize = 36, color = "blue")
-        ax.text(0.1, 0.6, 'D(x) = A(x) - B(x) = ' + str(D), fontsize = 36, color = "black")
-        ax.text(0.1, 0.5, 'E(x) = A(x) * B(x) = ' + str(E), fontsize = 36, color = "black")
-        ax.text(0.1, 0.3, 'F(x) = A(x) / B(x) = ' + str(F), fontsize = 36, color = "black")
+        ax.text(0.01, 0.9, 'A(x) = ' + str(A), fontsize = 36, color = "green")
+        ax.text(0.01, 0.8, 'B(x) = ' + str(B), fontsize = 36, color = 'red')
+        ax.text(0.01, 0.7, 'C(x) = A(x) + B(x) = ' + str(C), fontsize = 36, color = "blue")
+        ax.text(0.01, 0.6, 'D(x) = A(x) - B(x) = ' + str(D), fontsize = 36, color = "lime")
+        ax.text(0.01, 0.5, 'E(x) = A(x) * B(x) = ' + str(E), fontsize = 36, color = "purple")
+        ax.text(0.01, 0.4, 'F(x) = A(x) / B(x) = ' + str(F), fontsize = 36, color = "pink")
         plt.show()
         # QMessageBox.information(self, '233', '666', QMessageBox.Ok)
 

@@ -10,7 +10,7 @@ class PolyItem:
         if self.coefficient == 0:
             return '0'
         else:
-            return '%dx^{%d}' % (self.coefficient, self.exponential)
+            return ('%.1fx^{%.1f}' if self.coefficient * 10 % 10 != 0 else '%dx^{%d}') % (self.coefficient, self.exponential)
     
     def __add__(self, value):
         return PolyItem(self.coefficient + value.coefficient, self.exponential)
@@ -102,7 +102,7 @@ class Polynomial:
             if den in self.items:
                 ret.items.append(self.items[self.items.index(den)] / den)
             else:
-                ret.items.append(PolyItem(1, 0) / den)
+                ret.items.append(PolyItem(1.0, 0.0) / den)
         return ret
 
     def Simplify(self):
