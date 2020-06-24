@@ -1,11 +1,3 @@
-/* 
- * Reference Huffman coding
- * Copyright (c) Project Nayuki
- * 
- * https://www.nayuki.io/page/reference-huffman-coding
- * https://github.com/nayuki/Reference-Huffman-coding
- */
-
 package src;
 
 import java.io.EOFException;
@@ -13,50 +5,23 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Objects;
 
-
 /**
- * A stream of bits that can be read. Because they come from an underlying byte stream,
- * the total number of bits is always a multiple of 8. The bits are read in big endian.
- * Mutable and not thread-safe.
  * @see BitOutputStream
  */
 public final class BitInputStream implements AutoCloseable {
-	
-	/*---- Fields ----*/
-	
-	// The underlying byte stream to read from (not null).
 	private InputStream input;
-	
-	// Either in the range [0x00, 0xFF] if bits are available, or -1 if end of stream is reached.
 	private int currentByte;
-	
-	// Number of remaining bits in the current byte, always between 0 and 7 (inclusive).
 	private int numBitsRemaining;
 	
-	
-	
-	/*---- Constructor ----*/
-	
-	/**
-	 * Constructs a bit input stream based on the specified byte input stream.
-	 * @param in the byte input stream
-	 * @throws NullPointerException if the input stream is {@code null}
-	 */
 	public BitInputStream(InputStream in) {
 		input = Objects.requireNonNull(in);
 		currentByte = 0;
 		numBitsRemaining = 0;
 	}
 	
-	
-	
-	/*---- Methods ----*/
-	
 	/**
-	 * Reads a bit from this stream. Returns 0 or 1 if a bit is available, or -1 if
-	 * the end of stream is reached. The end of stream always occurs on a byte boundary.
-	 * @return the next bit of 0 or 1, or -1 for the end of stream
-	 * @throws IOException if an I/O exception occurred
+	 * \brief 从流中读一位，若结束返回-1
+	 * @throws IOException 
 	 */
 	public int read() throws IOException {
 		if (currentByte == -1)
@@ -73,13 +38,10 @@ public final class BitInputStream implements AutoCloseable {
 		return (currentByte >>> numBitsRemaining) & 1;
 	}
 	
-	
 	/**
-	 * Reads a bit from this stream. Returns 0 or 1 if a bit is available, or throws an {@code EOFException}
-	 * if the end of stream is reached. The end of stream always occurs on a byte boundary.
-	 * @return the next bit of 0 or 1
-	 * @throws IOException if an I/O exception occurred
-	 * @throws EOFException if the end of stream is reached
+	 * @return 下一位
+	 * @throws IOException
+	 * @throws EOFException 
 	 */
 	public int readNoEof() throws IOException {
 		int result = read();
@@ -89,15 +51,9 @@ public final class BitInputStream implements AutoCloseable {
 			throw new EOFException();
 	}
 	
-	
-	/**
-	 * Closes this stream and the underlying input stream.
-	 * @throws IOException if an I/O exception occurred
-	 */
 	public void close() throws IOException {
 		input.close();
 		currentByte = -1;
 		numBitsRemaining = 0;
 	}
-	
 }

@@ -1,59 +1,31 @@
-/* 
- * Reference Huffman coding
- * Copyright (c) Project Nayuki
- * 
- * https://www.nayuki.io/page/reference-huffman-coding
- * https://github.com/nayuki/Reference-Huffman-coding
- */
-
 package src;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
 
-
 /**
- * Encodes symbols and writes to a Huffman-coded bit stream. Not thread-safe.
+ * 产生编码并写入字节流
  * @see HuffmanDecoder
  */
 public final class HuffmanEncoder {
-	
-	/*---- Fields ----*/
-	
-	// The underlying bit output stream (not null).
 	private BitOutputStream output;
-	
-	/**
-	 * The code tree to use in the next {@link#write(int)} operation. Must be given a non-{@code null}
-	 * value before calling write(). The tree can be changed after each symbol encoded, as long
-	 * as the encoder and decoder have the same tree at the same point in the code stream.
-	 */
 	public CodeTree codeTree;
-	
-	
-	
-	/*---- Constructor ----*/
-	
 	/**
-	 * Constructs a Huffman encoder based on the specified bit output stream.
-	 * @param out the bit output stream to write to
-	 * @throws NullPointerException if the output stream is {@code null}
+	 * 构造哈夫曼编码
+	 * @param out 输出流
+	 * @throws NullPointerException 流为null时抛出异常
 	 */
 	public HuffmanEncoder(BitOutputStream out) {
 		output = Objects.requireNonNull(out);
 	}
 	
-	
-	
-	/*---- Method ----*/
-	
 	/**
-	 * Encodes the specified symbol and writes to the Huffman-coded output stream.
-	 * @param symbol the symbol to encode, which is non-negative and must be in the range of the code tree
-	 * @throws IOException if an I/O exception occurred
-	 * @throws NullPointerException if the current code tree is {@code null}
-	 * @throws IllegalArgumentException if the symbol value is negative or has no binary code
+	 * 编码并写入字节流
+	 * @param symbol 编码的输入
+	 * @throws IOException 
+	 * @throws NullPointerException 
+	 * @throws IllegalArgumentException 
 	 */
 	public void write(int symbol) throws IOException {
 		if (codeTree == null)
@@ -62,5 +34,4 @@ public final class HuffmanEncoder {
 		for (int b : bits)
 			output.write(b);
 	}
-	
 }

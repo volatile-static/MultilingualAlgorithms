@@ -1,17 +1,8 @@
-/* 
- * Reference Huffman coding
- * Copyright (c) Project Nayuki
- * 
- * https://www.nayuki.io/page/reference-huffman-coding
- * https://github.com/nayuki/Reference-Huffman-coding
- */
-
 package src;
 
 import java.util.Objects;
 import java.util.PriorityQueue;
 import java.util.Queue;
-
 
 /**
  * A table of symbol frequencies. Mutable and not thread-safe. Symbols values are

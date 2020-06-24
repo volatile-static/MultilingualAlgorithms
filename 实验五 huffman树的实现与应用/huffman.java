@@ -19,16 +19,14 @@ public abstract class huffman {
 	}
 	
 	private static void Compress(File inputFile, File outputFile) throws IOException {
-		// Read input file once to compute symbol frequencies.
-		// The resulting generated code is optimal for static Huffman coding and also canonical.
+		// 首先读取文件并统计出现次数
 		FrequencyTable freqs = HuffmanCompress.getFrequencies(inputFile);
-		freqs.increment(256); // EOF symbol gets a frequency of 1
+		freqs.increment(256); // EOF 出现1次
 		CodeTree code = freqs.buildCodeTree();
 		CanonicalCode canonCode = new CanonicalCode(code, freqs.getSymbolLimit());
-		// Replace code tree with canonical one. For each symbol,
-		// the code value may change but the code length stays the same.
+		// 范式哈夫曼编码
 		code = canonCode.toCodeTree();
-// Read input file again, compress with Huffman coding, and write output file
+		// 重新读取文件并生成哈夫曼编码
 		try (InputStream in = new BufferedInputStream(new FileInputStream(inputFile))) {
 			try (BitOutputStream out = new BitOutputStream(
 					new BufferedOutputStream(new FileOutputStream(outputFile)))) {
@@ -37,7 +35,6 @@ public abstract class huffman {
 			}
 		}
 		catch (IOException e) {
-			
 		}
 	}
 
@@ -50,7 +47,6 @@ public abstract class huffman {
 			}
 		}
 		catch (IOException e) {
-			
 		}
 	}
 }
