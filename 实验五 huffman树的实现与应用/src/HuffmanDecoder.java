@@ -22,14 +22,8 @@ public final class HuffmanDecoder {
 	/**
 	 * 从输入流读取编码并还原译文
 	 * @return 流
-	 * @throws IOException 
-	 * @throws EOFException 
-	 * @throws NullPointerException 
 	 */
 	public int read() throws IOException {
-		if (codeTree == null)
-			throw new NullPointerException("Code tree is null");
-		
 		InternalNode currentNode = codeTree.root;
 		while (true) {
 			int temp = input.readNoEof();
@@ -42,8 +36,6 @@ public final class HuffmanDecoder {
 				return ((Leaf)nextNode).symbol;
 			else if (nextNode instanceof InternalNode)
 				currentNode = (InternalNode)nextNode;
-			else
-				throw new AssertionError("Illegal node type");
 		}
 	}
 }

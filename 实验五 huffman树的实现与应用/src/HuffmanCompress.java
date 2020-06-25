@@ -24,9 +24,6 @@ public final class HuffmanCompress {
 	public static void writeCodeLengthTable(BitOutputStream out, CanonicalCode canonCode) throws IOException {
 		for (int i = 0; i < canonCode.getSymbolLimit(); i++) {
 			int val = canonCode.getCodeLength(i);
-			if (val >= 256)
-				throw new RuntimeException("The code for a symbol is too long");
-			
 			// 大端模式
 			for (int j = 7; j >= 0; j--)
 				out.write((val >>> j) & 1);
