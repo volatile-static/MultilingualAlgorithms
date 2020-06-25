@@ -11,23 +11,23 @@ namespace 表达式求值
 
     public class Expression
     {
-        Calc[] ops = new Calc[5];
+        Calc[] ops = new Calc[6];
         const int op_cnt = 9;
         private char[,] pri = new char[op_cnt, op_cnt] { //运算符优先等级 [栈顶] [当前]
    /*              |-------------------- 当 前 运 算 符 --------------------| */
-   /*                 +      -      *      /      ^      !      (      )      \0 */
-   /* --  + */ { '>',   '>',   '<',   '<',   '<',   '<',   '<',   '>',   '>' },
-   /* |   - */  { '>',   '>',   '<',   '<',   '<',   '<',   '<',   '>',   '>' },
-   /* 栈  * */ { '>',   '>',   '>',   '>',   '<',   '<',   '<',   '>',   '>' },
-   /* 顶  / */ { '>',   '>',   '>',   '>',   '<',   '<',   '<',   '>',   '>' },
-   /* 运  ^ */ { '>',   '>',   '>',   '>',   '>',   '<',   '<',   '>',   '>' },
-   /* 算  ! */  { '>',   '>',   '>',   '>',   '>',   '>',   ' ',   '>',   '>' },
+   /*                 +      -      *      /      ^      ,      (      )      \0 */
+   /* --  + */ { '>',   '>',   '<',   '<',   '<',   '>',   '<',   '>',   '>' },
+   /* |   - */  { '>',   '>',   '<',   '<',   '<',   '>',   '<',   '>',   '>' },
+   /* 栈  * */ { '>',   '>',   '>',   '>',   '<',   '>',   '<',   '>',   '>' },
+   /* 顶  / */ { '>',   '>',   '>',   '>',   '<',   '>',   '<',   '>',   '>' },
+   /* 运  ^ */ { '>',   '>',   '>',   '>',   '>',   '>',   '<',   '>',   '>' },
+   /* 算  , */  { '<',   '<',   '<',   '<',   '<',   '>',   ' ',   '>',   '>' },
    /* 符  ( */  { '<',   '<',   '<',   '<',   '<',   '<',   '<',   '=',   ' ' },
    /* |   ) */   { ' ',   ' ',   ' ',   ' ',   ' ',   ' ',   ' ',   ' ',   ' ' },
    /* -- \0 */ { '<',   '<',   '<',   '<',   '<',   '<',   '<',   ' ',   '=' }
         };
         private Dictionary<char, int> dec = new Dictionary<char, int>
-        { { '+', 0 }, { '-', 1 }, { '*', 2 }, { '/', 3 }, { '^', 4 }, { '!', 5 }, { '(', 6 }, { ')', 7 }, {'\0', 8 } };
+        { { '+', 0 }, { '-', 1 }, { '*', 2 }, { '/', 3 }, { '^', 4 }, { ',', 5 }, { '(', 6 }, { ')', 7 }, {'\0', 8 } };
         private ArrayList rpn = new ArrayList();
 
         private bool IsDigit(char c)
@@ -55,6 +55,11 @@ namespace 表达式求值
             return a / b;
         }
 
+        double Max(double a, double b)
+        {
+            return a > b ? a : b;
+        }
+
         private void GetRPN(string exp)
         {
             TStack<char> op = new TStack<char>();
@@ -62,7 +67,7 @@ namespace 表达式求值
             int i = 0;
             do
             {
-                if (IsDigit(exp[i]))
+                if (i < exp.Length && IsDigit(exp[i]))
                 {
                     int tmp = 0;
                     while (i < exp.Length && IsDigit(exp[i]))
@@ -101,7 +106,21 @@ namespace 表达式求值
             ops[1] = Sub;
             ops[2] = Mul;
             ops[3] = Div;
+            ops[5] = Max;
 
+            // 预处理函数
+            while (true)
+            {
+                if (!exp.Contains("max"))
+                    break;
+                int pos = exp.IndexOf("max");
+                exp = exp.Remove(pos, 3);
+            }
+
+            // 预处理负数
+            for (int i = 0; i < exp.Length; ++i)
+                if (exp[i] == '-' && (i > 0 && !IsDigit(exp[i - 1]) || i == 0))
+                    exp = exp.Insert(i, "0");  //!< 补0
             GetRPN(exp);
         }
 

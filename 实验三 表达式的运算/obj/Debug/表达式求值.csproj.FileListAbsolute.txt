@@ -8,3 +8,13 @@ D:\sync_doc\算法与数据结构\Algorithms\实验三 表达式的运算\表达
 D:\sync_doc\算法与数据结构\Algorithms\实验三 表达式的运算\表达式求值\obj\Debug\表达式求值.exe
 D:\sync_doc\算法与数据结构\Algorithms\实验三 表达式的运算\表达式求值\obj\Debug\表达式求值.pdb
 D:\sync_doc\算法与数据结构\Algorithms\实验三 表达式的运算\表达式求值\obj\Debug\表达式求值.csprojAssemblyReference.cache
+D:\sync_doc\算法与数据结构\MultilingualAlgorithms\实验三 表达式的运算\bin\Debug\表达式求值.exe.config
+D:\sync_doc\算法与数据结构\MultilingualAlgorithms\实验三 表达式的运算\bin\Debug\表达式求值.exe
+D:\sync_doc\算法与数据结构\MultilingualAlgorithms\实验三 表达式的运算\bin\Debug\表达式求值.pdb
+D:\sync_doc\算法与数据结构\MultilingualAlgorithms\实验三 表达式的运算\obj\Debug\表达式求值.csprojAssemblyReference.cache
+D:\sync_doc\算法与数据结构\MultilingualAlgorithms\实验三 表达式的运算\obj\Debug\表达式求值.Form1.resources
+D:\sync_doc\算法与数据结构\MultilingualAlgorithms\实验三 表达式的运算\obj\Debug\表达式求值.Properties.Resources.resources
+D:\sync_doc\算法与数据结构\MultilingualAlgorithms\实验三 表达式的运算\obj\Debug\表达式求值.csproj.GenerateResource.cache
+D:\sync_doc\算法与数据结构\MultilingualAlgorithms\实验三 表达式的运算\obj\Debug\表达式求值.csproj.CoreCompileInputs.cache
+D:\sync_doc\算法与数据结构\MultilingualAlgorithms\实验三 表达式的运算\obj\Debug\表达式求值.exe
+D:\sync_doc\算法与数据结构\MultilingualAlgorithms\实验三 表达式的运算\obj\Debug\表达式求值.pdb
